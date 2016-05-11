@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	.main tr:first-child{
+		background: lightgray;
+	}
+	.main td{
+		padding: 10px 20px;
+		border: 1px solid red;
+		border-bottom: none;
+	}
+	.main tr td:last-child td{
+		border-bottom: 1px solid red;
+	}
+
+
+	}
+	</style>
+	
+</head>
+<body>
+<!-- <div class="main">
+	<h4>Arzu</h4>
+	<table>
+		<tr>
+			<td>Ad</td>
+			<td>Soyad</td>
+			<td>Yash</td>
+			<td>Kok/Ariq</td>
+		</tr>
+		<tr>
+			<td>Arzu</td>
+			<td>Mammadrzayeva</td>
+			<td>20</td>
+			<td>Ariq</td>
+		</tr>
+		<tr>
+			<td>Arzu</td>
+			<td>Mammadrzayeva</td>
+			<td>20</td>
+			<td>Ariq</td>
+		</tr>
+		<tr>
+			<td>Arzu</td>
+			<td>Mammadrzayeva</td>
+			<td>20</td>
+			<td>Ariq</td>
+		</tr>
+		<tr>
+			<td>Arzu</td>
+			<td>Mammadrzayeva</td>
+			<td>20</td>
+			<td>Ariq</td>
+		</tr>
+	</table>
+</div> -->
+<script type="text/javascript">
+// 	var school={
+// 		teacher: ["Leyla", "Nargiz", "Samira" ],
+// 		student: ["Nijat", "Alya", "Murad"],
+// 		lessons: ["math", "english", "science"]
+// 	}
+// // document.write(school.teacher);
+// for(var i=0; i<school.teacher.length; i++){
+// 	document.write(school.teacher[i]+'<br>');
+// 	document.write(school.student[i]+'<br>');
+//  	document.write(school.lessons[i]+'<br>')
+// }
+// var insan={
+// 	ad: "Gunel",
+// 	soyad: "Gulieva",
+// 	dogumIli: 1991,
+// 	yas: function(){
+// 		document.write(2016-insan.dogumIli);
+// 		document.write(insan.ad+" "+ insan.soyad)
+// 	}
+// }
+// insan.yas();
+
+// var rabota={
+// 	mesto: "Baku",
+// 	nacalo: 9,
+// 	vrema: function(){
+// 		document.write(9+rabota.nacalo);
+// 	} 
+// }
+// rabota.vrema();
+
+// var adam=function(name, surname, age){
+// 	this.name=name,
+// 	this.surname=surname,
+// 	this.age=age
+// 	this.call=function(){
+// 		document.write(this.name+" "+this.surname);
+// 	}
+// }
+// var efqan=new adam("Efqan", "Elovsetoglu", 15);
+// efqan.call();
+
+
+// var student=function(name, surname, birthdate,height, weight) {
+// 	this.name=name,
+// 	this.surname=surname,
+// 	this.birthdate=birthdate,
+// 	this.yas=function(){
+// 		document.write(2016-birthdate);
+// 	}
+// 	this.height=height,
+// 	this.weight=weight,
+// 	this.alert=function(){
+// 		document.write(this.name + this.surname+this.birthdate+this.yas()+this.height+this.weight);
+// 	}
+// }
+// var arzu= new student("Arzu", "Mammadova",1991,160,55);
+// arzu.alert();
+
+//obyekt ve konstruktor
+// var telebe = function(ad, soyad, dogumtarixi, boy, ceki){
+// 	this.ad=ad,
+// 	this.soyad=soyad,
+// 	this.dogumtarixi=dogumtarixi,
+// 	this.boy=boy,
+// 	this.ceki=ceki,
+// 	this.yas=function(){
+// 		return(2016-this.dogumtarixi);
+// 	}
+// 	this.diyetlazimdi=function(){
+// 		a=this.boy/(this.ceki*this.ceki)
+// 		if(a<25){
+// 			return "0 bedensen";
+// 		}else{
+// 			return "Allah gozunu doydursun";
+// 		}
+// 		}
+// 		this.ekranayaz=function(){
+// 			document.write("<div class=main>");
+// 			document.write("<table")
+// 			document.write("<h4>"+this.ad+"</h4>");
+// 			document.write("<tr><td>Ad</td><td>Soyad</td><td>Yash</td><td>Ceki</td></tr>");
+// 			document.write("<tr><td>"+this.ad+"</td><td>"+this.soyad+"</td><td>"+this.yas()+"</td><td>"+this.diyetlazimdi()+"</td></tr>");
+// 			document.write("</table");
+// 			document.write("</div>");
+// 		}
+// 	}
+// 	var meryam = new telebe("Meryam","Yusifova", 2012, 1.08,15);
+// 	meryam.ekranayaz();
+var telebe= function(ad, soyad, netice){
+	this.ad=ad,
+	this.soyad=soyad,
+	this.netice=netice,
+	this.cavab=function(){
+		a=this.netice
+		if (a<50) {
+			return "kesildin";
+		}else{
+			return "kecdin";
+		}
+		}
+		this.ekranayaz=function(){
+			document.write("<div class='main'>");
+			document.write("<h4>"+this.ad+"</h4>");
+			document.write("<table>");
+			document.write("<tr><td>Ad</td><td>Soyad</td><td>Netice</td></tr>");
+			document.write("<tr><td>"+this.ad+"</td><td>"+this.soyad+"</td><td>"+this.cavab()+"</td></tr>");
+			document.write("</table>");
+			document.write("</div>");
+
+		}
+	}
+
+var gunel = new telebe ("Gunel", "Guliyeva", 95);
+var konul = new telebe ("Konul", "Humbetova", 34);
+var gunay = new telebe ("Gunay", "Mamedova", 79);
+gunel.ekranayaz();
+konul.ekranayaz();
+gunay.ekranayaz();
+</script>
+
+</body>
+</html>
